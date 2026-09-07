@@ -1,8 +1,10 @@
-import { Box, Flex, Text } from "@chakra-ui/react";
 import React from "react";
+import { Box, Flex, Text } from "@chakra-ui/react";
 import { ColorModeButton } from "./colorMode";
+import { useDevice } from "../../hooks/device";
 
 export const Banner = () => {
+    const device = useDevice();
 
     return (
         <Box
@@ -10,7 +12,7 @@ export const Banner = () => {
             backgroundPosition='center'
             backgroundSize='cover'
             backgroundRepeat='no-repeat'
-            h={'30vh'}
+            h={device == 'MOBILE' ? '20vh' : '30vh'}
             justifyContent={'center'}
             alignItems={'center'}
             display={'flex'}

@@ -3,7 +3,7 @@ import { Project } from "../../content/projects-content";
 import { Badge, Box, Button, Card, Image, Flex, Wrap } from "@chakra-ui/react";
 
 
-export const Pane = ({project}: {project: Project}) => {
+export const HorizontalPane = ({project}: {project: Project}) => {
 
     return (
         <Card.Root flexDirection="row" overflow="hidden" h={'100%'}>
